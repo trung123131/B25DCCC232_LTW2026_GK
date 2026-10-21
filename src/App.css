@@ -1,18 +1,37 @@
+body {
+  margin: 0;
+  background-color: #f4f6f9;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .container {
-  padding: 20px;
-  font-family: Arial, sans-serif;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 24px 32px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .navbar {
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #ccc;
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #eaeaea;
 }
 
 .nav-item {
-  margin-right: 16px;
   text-decoration: none;
-  color: #333;
+  color: #555;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.2s;
+}
+
+.nav-item:hover {
+  color: #007bff;
 }
 
 .active {
@@ -20,44 +39,126 @@
   font-weight: bold;
 }
 
-.filter-bar {
+h1 {
+  color: #2c3e50;
+  font-size: 24px;
   margin-bottom: 16px;
+}
+
+p {
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.filter-bar {
+  margin-bottom: 20px;
   display: flex;
-  gap: 20px;
+  gap: 24px;
   align-items: center;
+  background: #f8f9fa;
+  padding: 14px 18px;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+}
+
+.filter-bar input,
+.filter-bar select {
+  padding: 6px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+}
+
+.filter-bar input:focus,
+.filter-bar select:focus {
+  border-color: #80bdff;
 }
 
 .book-table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 12px;
+  background: #fff;
+}
+
+.book-table th {
+  background-color: #f1f3f5;
+  color: #495057;
+  font-weight: 600;
 }
 
 .book-table th,
 .book-table td {
-  border: 1px solid #ccc;
-  padding: 8px 12px;
+  border: 1px solid #dee2e6;
+  padding: 10px 14px;
   text-align: left;
+  font-size: 14px;
+}
+
+.book-table td a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.book-table td a:hover {
+  text-decoration: underline;
 }
 
 .book-table tbody tr.borrowed {
-  background-color: #d9d9d9;
+  background-color: #e9ecef;
+  color: #6c757d;
 }
 
 .book-table tbody tr:hover {
-  background-color: #cce5ff;
+  background-color: #e2e6ea;
+}
+
+button {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3;
 }
 
 .form-group {
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .form-group label {
   display: inline-block;
-  width: 120px;
+  width: 130px;
+  font-weight: 500;
+  color: #495057;
+}
+
+.form-group input,
+.form-group select {
+  padding: 8px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  width: 280px;
+  font-size: 14px;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #80bdff;
 }
 
 .error-text {
-  color: red;
-  margin-top: 10px;
+  color: #dc3545;
+  margin-top: 12px;
+  font-weight: 500;
 }
